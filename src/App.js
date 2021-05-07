@@ -3,7 +3,7 @@ import './App.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/analytics';
+// import 'firebase/analytics';
 
 
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -24,7 +24,7 @@ firebase.initializeApp({
 
 const auth  = firebase.auth();
 const firestore =firebase.firestore();
-const analytics = firebase.analytics();
+// const analytics = firebase.analytics();
 
 function App(){
 const [user] =useAuthState(auth);
@@ -32,7 +32,7 @@ const [user] =useAuthState(auth);
   return (
     <div className="App">
       <header>
-        <h1>💬</h1>
+        <h1>Let's chat!💬</h1>
         <SignOut/>
 </header>
 
@@ -94,7 +94,7 @@ return(
 <form onSubmit ={sendMessage}> 
 <input value ={formValue}onChange={(e) => setFormValue(e.target.value)} placeholder ="say somethig nice"/>
 
-<button type ="submit" disabled={!formValue}>send</button>
+<button type ="submit" disabled={!formValue}>✅ </button>
 
 
 
